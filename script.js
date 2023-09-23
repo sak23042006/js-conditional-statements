@@ -15,23 +15,18 @@ submitButton1.onclick = () => {
   // Score of 70 to 89 — “That’s a great score. You really know your stuff.”
   // Score of 90 to 100 — “What an amazing score!”
 
-  if (numberInput1 <0 || numberInput1>100){
-    message1= "This is not possible. An error has occurred."
-  }
-  else if(numberInput1 >=0 && numberInput1<20){
-    message1= "That was a terrible score!"
-  }
-  else if(numberInput1 >=20 && numberInput1<40){
-    message1= "You know some things. Needs improvement."
-  }
-  else if(numberInput1 >=40 && numberInput1<70){
-    message1= "You did a passable job, not bad!"
-  }
-  else if(numberInput1 >=70 && numberInput1<90){
-    message1= "That’s a great score. You really know your stuff."
-  }
-  else{
-    message1= "What an amazing score!"
+  if (numberInput1 < 0 || numberInput1 > 100) {
+    message1 = 'This is not possible. An error has occurred.';
+  } else if (numberInput1 >= 0 && numberInput1 < 20) {
+    message1 = 'That was a terrible score!';
+  } else if (numberInput1 >= 20 && numberInput1 < 40) {
+    message1 = 'You know some things. Needs improvement.';
+  } else if (numberInput1 >= 40 && numberInput1 < 70) {
+    message1 = 'You did a passable job, not bad!';
+  } else if (numberInput1 >= 70 && numberInput1 < 90) {
+    message1 = 'That’s a great score. You really know your stuff.';
+  } else {
+    message1 = 'What an amazing score!';
   }
 
   commentContainer1.innerHTML = message1;
@@ -54,5 +49,24 @@ submitButton2.onclick = () => {
   // Score of 70 to 89 — “That’s a great score. You really know your stuff.”
   // Score of 90 to 100 — “What an amazing score!”
 
+  switch (true) {
+    case numberInput2 >= 0 && numberInput2 <= 19:
+      message2 = 'That was a terrible score!';
+      break;
+    case numberInput2 >= 20 && numberInput2 <= 39:
+      message2 = 'You know some things. Needs improvement.';
+      break;
+    case numberInput2 >= 40 && numberInput2 <= 69:
+      message2 = 'You did a passable job, not bad!';
+      break;
+    case numberInput2 >= 70 && numberInput2 <= 89:
+      message2 = 'That’s a great score. You really know your stuff.';
+      break;
+    case numberInput2 >= 90 && numberInput2 <= 100:
+      message2 = 'What an amazing score!';
+      break;
+    default:
+      message2 = 'This is not possible. An error has occurred.';
+  }
   commentContainer2.innerHTML = message2;
 };
